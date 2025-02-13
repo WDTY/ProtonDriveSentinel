@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  proton_file_sentinel:
+    build: .
+    volumes:
+      - proton_sync:/app/proton_sync
+    restart: unless-stopped
+
+volumes:
+  proton_sync:
